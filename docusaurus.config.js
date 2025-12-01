@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Play11s Docs',
   tagline: 'Docs, guides and roadmap for Play11s',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Future flags
   future: {
@@ -61,7 +61,7 @@ const config = {
         title: 'Play11s Docs',
         logo: {
           alt: 'Play11s Logo',
-          src: 'img/logo.svg', // replace with your actual logo path (e.g. img/play11s-logo.png)
+          src: 'img/logo.png', // replace with your actual logo path (e.g. img/play11s-logo.png)
         },
         items: [
           {
