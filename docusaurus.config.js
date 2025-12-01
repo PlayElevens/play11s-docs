@@ -37,7 +37,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Serve docs at site root (so docs appear at /)
-          routeBasePath: '/',
+          routeBasePath: 'docs',
           // Enable "Edit this page" linking to your repo
           editUrl: 'https://github.com/PlayElevens/play11s-docs/edit/main/',
         },
