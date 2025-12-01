@@ -1,5 +1,145 @@
-/* Sidebar spacing + text size */
-.menu__link {
-  font-size: 16px;
-  padding: 10px 8px;
+/* src/css/custom.css
+   Play11s-themed site colors, typography, and buttons.
+   Paste this into your src/css/custom.css (overwrite or append).
+*/
+
+/* palette */
+:root{
+  --p11s-bg-1: #0a0210;   /* near-black */
+  --p11s-bg-2: #1b0624;   /* deep purple */
+  --p11s-accent: #b849ff; /* purple accent (links, highlights) */
+  --p11s-cta: #ef2e6a;    /* magenta CTA */
+  --p11s-muted: #9aa0a6;  /* muted body text */
+  --p11s-text: #e9eef2;   /* primary text */
+  --p11s-card: rgba(255,255,255,0.03);
+  --p11s-radius: 12px;
+}
+
+/* big site background gradient */
+html, body, #__docusaurus {
+  background: linear-gradient(135deg, var(--p11s-bg-1) 0%, var(--p11s-bg-2) 60%);
+  color: var(--p11s-text);
+  min-height: 100%;
+}
+
+/* page container and docs area */
+.theme-doc-markdown, .markdown, .container, .main-wrapper {
+  color: var(--p11s-text);
+}
+
+/* general text styling */
+:root { --ifm-font-base-font-size: 16px; }
+body, .markdown, .ifm-markdown {
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--p11s-text);
+}
+
+/* headings — heavier, larger */
+h1, .hero__title, .theme-doc-markdown h1 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--p11s-text);
+}
+h2, h3, h4 {
+  color: var(--p11s-text);
+  font-weight: 700;
+}
+
+/* muted body text */
+p, .theme-doc-markdown p {
+  color: var(--p11s-muted);
+  font-size: 1rem;
+}
+
+/* docs content card / panels */
+.docItemWrapper, .card, .ifm-card {
+  background: var(--p11s-card);
+  border-radius: var(--p11s-radius);
+  border: 1px solid rgba(255,255,255,0.03);
+  padding: 1rem;
+}
+
+/* navbar customisations */
+.navbar, .navbar__inner {
+  background: transparent;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.navbar__brand, .navbar__title {
+  color: var(--p11s-text);
+  font-weight: 700;
+}
+.navbar__items a, .navbar__items .navbar__link {
+  color: var(--p11s-text);
+  opacity: 0.9;
+}
+.navbar__items a:hover, .navbar__items .navbar__link:hover {
+  color: var(--p11s-accent);
+}
+
+/* buttons / CTAs */
+.button, .ifm-button, .navbar__link--cta {
+  background: linear-gradient(90deg, var(--p11s-cta), var(--p11s-accent));
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(184,73,255,0.12);
+}
+.button:hover, .ifm-button:hover {
+  transform: translateY(-1px);
+}
+
+/* links */
+a {
+  color: var(--p11s-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover { text-decoration: underline; }
+
+/* sidebar styling (docs) */
+.theme-doc-sidebar-container {
+  background: transparent;
+  border-right: 1px solid rgba(255,255,255,0.03);
+}
+.docSidebarItemLink {
+  color: var(--p11s-text);
+}
+.docSidebarItemLink.active {
+  color: var(--p11s-accent);
+  font-weight: 700;
+}
+
+/* footer */
+.footer, .ifm-footer {
+  background: linear-gradient(180deg, rgba(0,0,0,0.15), transparent);
+  border-top: 1px solid rgba(255,255,255,0.03);
+  color: var(--p11s-muted);
+}
+
+/* hero-like frontpage card (if you use a custom index hero) */
+.hero, .homeHero {
+  padding: 4rem 0;
+  color: var(--p11s-text);
+}
+.hero .hero__subtitle {
+  color: var(--p11s-muted);
+}
+
+/* code blocks: dark */
+.theme-code-block, pre[class*="language-"] {
+  background: #0b0810 !important;
+  color: #e6e6ff !important;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* small responsive tweaks */
+@media (max-width: 768px) {
+  .navBar, .navbar__items { display:block; }
+  h1 { font-size: 1.7rem; }
+  .hero { padding: 2rem 0; }
 }
